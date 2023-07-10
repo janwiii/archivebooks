@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArchiveBooks</title>
+
+	<meta charset="UTF-8">
+  	<meta name="description" content="ArchiveHome">
+  	<meta name="keywords" content="Archivebooks, Bookstore, Books">
+  	<meta name="author" content="Janwi Shrestha">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<!-- external css link -->
+	<link rel="stylesheet" type="text/css" href="css/css1.css">
+
+	<!-- internal css -->
+	<style type="text/css">
+
+		/* welcome image */
+		.design{
+			width: 100%;
+			height: 500px;
+			background-color: #def3f1; /* apple green */
+			display: flex; /* the divs inside this div will be shown in flexible layouts */
+		}
+
+		.homemsg{
+			margin: 40px 30px 20px 110px;
+			padding-top: 70px; 
+			padding-left: 40px; 
+			font-family: Century Gothic; 
+		}
+
+		h1{
+			font-size: 48px;
+			color: #58667b; /* Shuttle grey */
+		}
+
+		.homebut{
+			padding: 10px 25px;
+			font-size: 20px;
+			font-weight: 600; 
+			border-radius: 5px; 
+			background-color: #4c8c9e; /* wedgewood (shade of blue) */
+			border-color: #4c8c9e; /* wedgewood (shade of blue) */
+			color: white; /* text will appear in white color */
+			cursor: pointer; /* the cursor will be changed to pointer on hover on this div */
+		}
+
+		.homeimg{
+			margin: 100px 30px 20px 150px;
+			padding: 50px;
+		}
+
+		/* for the books displayed in the homepage */
+		#products{
+			height: 80%;
+			width: 80%;
+			background-color: white; 
+			margin: 20px 110px 110px 100px; 
+			padding: 20px; 
+
+		}
+
+		.productsrow{
+			height: 340px;
+			width: 80%;
+			display: flex; /* the divs inside this div will be shown in flexible layouts */
+		}
+
+		.productsrow > div{
+			margin: 10px 50px 10px 17px; 
+			height: 300px;
+			width: 160px;
+		}
+
+		figcaption{
+			color: #5d6b6a; /* GREY */
+			font-family: Cambria;
+			margin-top: 5px;
+		}
+
+		h2{
+			font-family: Palatino, URW Palladio L, serif; 
+			color: #887d7d; /* brownish */
+			font-size: 30px;
+			font-variant: small-caps; /* this will change small letters to small caps; captial letters of smaller size */
+		}
+
+		.productsrow > div > img{
+			width: 155px;
+			height: 250px;
+			cursor: pointer; /* the cursor will be changed to pointer on hover on this div */
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+		}
+
+		.productsrow > div > img:hover{
+			transform: scale(1.08); /* the image will transform to 1.08x its size on hover */
+			transition: 0.75s; /* the transition will take 0.75 seconds */
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="wholepage">
+
+		<!-- Navigation bar -->
+		<div id="navbar">
+
+			<!-- Logo -->
+			<div id="logo">
+				<img src="images/logo.png">
+			</div>
+
+			<!-- Navigation bar buttons -->
+			<div id="navigate">	
+				<a href="index.html"><input type="button" class="active" value="Home"></a>
+  				<a href="pages/products.html"><input type="button" class="button" value="Products"></a>
+  				<a href="pages/blog.html"><input type="button" class="button" value="Blog"></a>
+  				<a href="pages/research.html"><input type="button" class="button" value="Research"></a>
+  				<a href="pages/contact.html"><input type="button" class="button" value="Contact Us"></a>
+			</div>
+		</div>
+
+		<div class="design">
+
+			<!-- welcome message -->
+			<div class="homemsg">
+				<h1>WELCOME TO THE ARCHIVES!</h1>
+				<p style="font-size: 20px; color: #465262;">Explore the best collection of books with us.</p>
+
+				<!-- external link for products page -->
+				<a href="pages/products.html"><input type="button" class="homebut" value="Find Books"></a>
+			</div>
+
+			<div class="homeimg">
+				<img src="images/bookss.png" style="height: 270px; width: 570px;">
+			</div>
+			
+
+		</div>
+
+		<div id="products">
+
+			<h2>#Sale 20% OFF</h2>
+
+			<!-- Contents of Sale -->
+			<div class="productsrow">
+				
+				<div>
+					<img src="images/09.jpg"><br> 
+					<figcaption><b>Anna Karenina</b><br>
+							 		<span style="text-decoration: line-through;">NPR 1800.00</span><br>
+							 		NPR 1440.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/567.jpg"><br> 
+					<figcaption><b>I Capture the Castle</b><br>
+							 	    <span style="text-decoration: line-through;">NPR 1400.00</span><br>
+							 		NPR 1120.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/888.jpg"><br> 
+					<figcaption><b>Klara and The Sun</b><br>
+							 		<span style="text-decoration: line-through;">NPR 1500.00</span><br>
+							 		NPR 1200.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/345.jpg"><br> 
+					<figcaption><b>The Kite Runner</b><br>
+									<span style="text-decoration: line-through;">NPR 2000.00</span><br>
+							 		NPR 1600.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/56.jpg"><br> 
+					<figcaption><b>A Tale of Two Cities</b><br>
+							 		<span style="text-decoration: line-through;">NPR 1200.00</span><br>
+							 		NPR 960.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/77.jpg"><br> 
+					<figcaption><b>Orlando</b><br>
+							 		<span style="text-decoration: line-through;">NPR 1350.00</span><br>
+							 		NPR 1080.00
+					</figcaption>
+				</div>
+
+			</div>
+
+
+			<h2>Books That Became Blockbusters</h2>
+
+			<!-- Contents of Blockbusters -->
+			<div class="productsrow">
+
+				<div>
+					<img src="images/66.jpg"><br> 
+					<figcaption><b>Pride and Prejudice</b><br>
+							 		Genre: Romance Novel
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/132.jpg"><br> 
+					<figcaption><b>Little Women</b><br>
+							 		Genre: Fiction, Comedy
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/cra.jpg"><br>
+					<figcaption><b>Crazy Rich Asians</b><br>
+									Genre: Romance, Comedy
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/gf.jpg"><br> 
+					<figcaption><b>The GodFather</b><br>
+							 		Genre: Crime Fiction
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/hp.jpg"><br> 
+					<figcaption><b>Harry Potter</b><br>
+							 		Genre: Action and Adventure
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/tsr.jpg"><br> 
+					<figcaption><b>The Shawshank Redemption</b><br>
+									Genre: Crime Fiction
+					</figcaption>
+				</div>
+
+			</div>
+
+
+			<h2>TopSellersOfAllTime</h2>
+
+			<!-- Contents of TopSellers -->
+			<div class="productsrow">
+
+				<div>
+					<img src="images/12.jpg"><br> 
+					<figcaption><b>The Da Vinci Code</b><br>
+							 		NPR 3100.50
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/22.jpg"><br> 
+					<figcaption><b>The Alchemist</b><br>
+									NPR 2599.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/777.png"><br> 
+					<figcaption><b>Fifty Shades Freed</b><br>
+							 		NPR 2150.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/33.jpg"><br> 
+					<figcaption><b>The Lord of the Rings</b><br>
+							 		NPR 1599.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/553.jpg"><br> 
+					<figcaption><b>P.S. I Love You</b><br>
+									NPR 1250.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/1000.jpg"><br> 
+					<figcaption><b>A Thousand Splendid Suns</b><br>
+							 		NPR 1725.00
+					</figcaption>
+				</div>
+
+			</div>
+
+			<h2>Have you read these yet?</h2>
+
+			<!-- Contents of Have you read these yet? -->			
+			<div class="productsrow">
+
+				<div>
+					<img src="images/6325.jpg"><br> 
+					<figcaption><b>Fifty Shades Darker</b><br>
+									NPR 1355.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/5555.jpg"><br> 
+					<figcaption><b>Twilight</b><br>
+							 		NPR 2100.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/333.jpg"><br> 
+					<figcaption><b>The Hobbit</b><br>
+							 		NPR 2200.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/6.jpg"><br> 
+					<figcaption><b>Romeo and Juliet</b><br>
+							 		NPR 1850.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/1.jpg"><br> 
+					<figcaption><b>To Kill a Mockingbird</b><br>
+									NPR 1250.00
+					</figcaption>
+				</div>
+
+				<div>
+					<img src="images/444.jpg"><br> 
+					<figcaption><b>Fifty Shades of Grey</b><br>
+									NPR 2000.00
+					</figcaption>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Footer -->
+		<div id="details">
+
+			<center><img style="width: 300px; margin-top: 10px;" src="images/logo.png" alt="centered image"></center>
+
+			<div class="work">
+				<div style="margin-left: 35%; text-align: center; line-height: 1.5;">
+					<b style="color: #204C64;">Our Socials:</b><br>
+
+					<!-- link for facebook -->
+					<a href="https://www.facebook.com/"><img src="images/fb.png"></a>
+
+					<!-- link for instagram -->
+					<a href="https://www.instagram.com/"><img src="images/ig.png"></a>
+
+					<!-- link for twitter -->
+					<a href="https://www.twitter.com/"><img src="images/tw.png"></a>
+				</div>
+
+				<div style="margin-left: 10%; color: #204C64;">
+					<b>Interested in working with us?</b><br>
+					Email: sales@archivebooks.com<br>
+					Tel: +977-14578445
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

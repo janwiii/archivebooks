@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArchiveBooks</title>
+
+	<meta charset="UTF-8">
+  	<meta name="description" content="Contact Us">
+  	<meta name="keywords" content="Archivebooks, Bookstore, Books">
+  	<meta name="author" content="Janwi Shrestha">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<!-- external css link -->
+	<link rel="stylesheet" type="text/css" href="../css/css1.css">
+
+	<!-- internal css -->
+	<style type="text/css">
+
+		/* main contents of the contact us page below navbar */
+		.contact{
+			display: flex; /* the divs inside this div will be shown in flexible layouts */
+			width: 70%;
+			height: 75%;
+			margin-top: 10px; 
+			margin-left: 18%; 
+			margin-bottom: 50px; 
+			font-family: proxima-nova, sans-serif; 
+		}
+
+		a{
+			text-decoration: none; /* there will be no text decorations and if there are an, they will be removed */
+			color: #257bc2; /* Mariner blue */
+		}
+
+		a:hover{
+			text-decoration: underline; /* the text will be underlined on hover */
+		}
+
+		/* left part where mails and offices are mentioned */
+		.mails{
+			width: 50%;
+			margin-left: 5%; 
+			margin-top: 3%; 
+		}
+
+		p{
+			font-family: proxima-nova, sans-serif;
+			color: #9c9c9d; /* Grey */
+			font-size: 13px;
+			font-weight: 500;
+		}
+
+		h1{
+			font-family: proxima-nova, sans-serif; 
+			font-weight: 500;
+			color: #2075b8; /* Mariner blue */
+			font-size: 36px;
+		}
+
+		h3{
+			color: #959697; /* Oslo gray */
+			font-weight: 400;
+			font-family: proxima-nova, sans-serif; 
+		}
+
+		.city{
+			display: flex; /* the divs inside this div will be shown in flexible layouts */
+			margin-top: 10px; 
+		}
+
+		/* form part */
+		.form{
+			width: 50%;
+			font-family: proxima-nova, sans-serif; 
+			margin-top: 5%; 
+		}
+
+		label{
+			font-size: 14px;
+		}
+
+		#box{
+			border-radius: 3px;
+			border-color: #d3d2d2; /* the color of the border will be cream colour */
+			height: 25px;
+			margin-top: 10px; 
+		}
+
+		#box2{
+			border-radius: 3px; 
+			border-color: #d3d2d2; /* the color of the border will be cream colour */
+			margin-top: 10px; 
+		}
+
+		/* submit button */
+		#submit{
+			border-radius: 5px; 
+			padding: 5px 20px; 
+			font-size: 14px;
+			color: white; /* the color of the text of this tag will be white */
+			font-weight: 600;
+			background-color: #59c3b8; /* the background color will appear mint */
+			cursor: pointer; /* the cursor will be changed to pointer on hover on this div */
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="wholepage" style="height: 80%;">
+
+		<!-- Navigation bar -->
+		<div id="navbar">
+
+			<!-- Logo -->
+			<div id="logo">
+				<!-- this linked image will take us back to homepage -->
+				<a href="../index.html"><img src="../images/logo.png"></a>
+			</div>
+
+			<!-- Navigation bar buttons -->
+			<div id="navigate">	
+				<a href="../index.html"><input type="button" class="button" value="Home"></a>
+  				<a href="../pages/products.html"><input type="button" class="button" value="Products"></a>
+  				<a href="../pages/blog.html"><input type="button" class="button" value="Blog"></a>
+  				<a href="../pages/research.html"><input type="button" class="button" value="Research"></a>
+  				<a href="../pages/contact.html"><input type="button" class="active" value="Contact Us"></a>
+			</div>
+		</div>
+		<!-- nav div ends here -->
+
+		<!-- Main contents of Contact us page starts here -->
+		<div class="contact">
+
+			<!-- div containing info of the bookstore starts here -->
+			<div class="mails">
+				<h1>Let's Talk!</h1>
+				<h3>Please feel free to ask any questions or inquires.<br>We'll contact you as soon as possible.</h3>
+
+				<p>
+					For media inquires, please contact <a href="https://www.gmail.com/">pr@archivebooks.com</a><br><br>
+					For information about us, please contact <a href="https://www.gmail.com/">info@archivebooks.com</a>
+				</p><br><br>
+
+				<div>
+					<h1 style="font-size: 22px; color: black; font-weight: 540;">Our Offices:</h1>
+
+					<!-- this div has the addresses of the bookstore offices -->
+					<div class="city">
+
+						<div style="margin-right: 10px;">
+							<img src="../images/london.jpg" style="height: 70px; width: 70px;">
+						</div>
+
+						<div style="padding-top: 5px; line-height: 1.5;">
+							<b>London</b><br>
+							706 King Street, London WC86, 7CD
+						</div>
+
+					</div>
+
+					<div class="city">
+						
+						<div style="margin-right: 10px;">
+							<img src="../images/paris.png" style="height: 70px; width: 70px;">
+						</div>
+
+						<div style="padding-top: 5px; line-height: 1.5;">
+							<b>Paris</b><br>
+							31 Rue Du Parchet, Paris, France
+						</div>
+
+					</div>
+
+					<div class="city">
+						
+						<div style="margin-right: 10px;">
+							<img src="../images/nepal.png" style="height: 70px; width: 70px;">
+						</div>
+
+						<div style="padding-top: 5px; line-height: 1.5;">
+							<b>Kathmandu</b><br>
+							Pako Sadak, New Road, Kathmandu
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- info div ends here -->
+
+			<!-- form starts here -->
+			<div class="form">
+
+				<form name="contactus" onsubmit="validateform()"> <!-- javascript will be applied here -->
+
+					<label> First Name </label><br>
+					<input type="text" name="fname" id="box" size="50">
+					<br>
+					<br>
+
+					<label> Last Name </label><br>
+					<input type="text" name="lname" id="box" size="50">
+					<br>
+					<br>
+
+					<label> Email </label><br>
+					<input type="text" name="email" id="box" size="50">
+					<br>
+					<br>
+
+					<label> Contact Number(Optional) </label><br>
+					<input type="text" name="contactnumber" id="box" size="50">
+					<br>
+					<br>
+
+					<label> Your Message </label>
+					<br>
+					<textarea rows="10" cols="48" name="message" id="box2" placeholder="Enter your message here.."></textarea>
+					<br>
+					<br>
+
+					<input type="submit" value="SUBMIT" id="submit"> <!-- Submit button -->
+
+    			</form>
+
+    		</div>
+    		<!-- form section ends here -->
+
+		</div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="details">
+		
+		<center><img style="width: 300px; margin-top: 10px;" src="../images/logo.png" alt="centered image"></center>
+
+		<div class="work">
+			<div style="margin-left: 35%; text-align: center; line-height: 1.5;">
+				<b style="color: #204C64;">Our Socials:</b><br>
+
+				<!-- link for facebook -->
+				<a href="https://www.facebook.com/"><img src="../images/fb.png"></a>
+
+				<!-- link for instagram -->
+				<a href="https://www.instagram.com/"><img src="../images/ig.png"></a>
+
+				<!-- link for twitter -->
+				<a href="https://www.twitter.com/"><img src="../images/tw.png"></a>
+			</div>
+
+			<div style="margin-left: 10%; color: #204C64;">
+				<b>Interested in working with us?</b><br>
+				Email: sales@archivebooks.com<br>
+				Tel: +977-14578445
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Footer section ends here -->
+
+	<!-- JavaScript for form validation starts here -->
+	<script type="text/javascript">
+		function validateform()
+		{
+			var firstname= document.forms["contactus"]["fname"].value;
+			var lastname= document.forms["contactus"]["lname"].value;
+			var email= document.forms["contactus"]["email"].value;
+			var number= document.forms["contactus"]["contactnumber"].value;		
+			var messagedetails= document.forms["contactus"]["message"].value;
+
+			if(firstname == "" || lastname == "" || email == "" || messagedetails == "")
+			{
+				alert("Please fill up all the entries."); //given popup message is shown if any of the mentioned entries are not entered
+			}
+
+			else
+			{
+				alert("Thank you for your message! Have a good day."); //given popup message is shown if all th eentries are filled up
+			}
+		}
+	</script>
+	<!-- JavaScript for form validation ends here -->
+
+</body>
+</html>

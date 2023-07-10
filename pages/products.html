@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArchiveBooks</title>
+
+	<meta charset="UTF-8">
+  	<meta name="description" content="Products">
+  	<meta name="keywords" content="Archivebooks, Bookstore, Books">
+  	<meta name="author" content="Janwi Shrestha">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<!-- external css link -->
+	<link rel="stylesheet" type="text/css" href="../css/css1.css">
+
+	<!-- external js link -->
+	<script src="../js/read.js"></script>
+
+	<!-- internal css -->
+	<style type="text/css">
+
+		/* whole products div */
+		#products{
+
+			height: 80%; 
+			width: 1300px;
+			background-color: white; /* the background color will appear white */
+			margin: 10px 110px 30px 100px; 
+			padding: 20px; 
+
+		}
+
+		/* slider */
+		#slider{
+
+			width: 1300px;
+			height: 450px;
+			margin: 20px 0px 40px 10px;
+		
+		}
+
+		/* first div inside books div */
+		.bigbooks{
+
+			display: flex; /* the divs inside this div will be shown in flexible layouts */
+			margin-bottom: 50px;
+
+		}
+
+		.book{
+			
+			height: 400px;
+			width: 600px;
+			display: inline-flex; /* the divs inside this div will be shown in flexible layouts in the same line */
+			margin-left: 50px;
+			margin-right: 50px;
+
+		}
+
+		.imgs{
+
+			height: 160px;
+			width: 110px;
+			margin: 200px 30px 10px 50px;
+
+		}
+
+		.title{
+
+			margin-top: 280px;
+			color: white; /* the color of the text in this div will appear white */
+			line-height: 1.5;
+
+		}
+
+		.imgs:hover{
+
+			transform: scale(1.08); /* the image will transform to 1.08x its size on hover */
+			transition: 0.75s; /* the transition will take 0.75 seconds */
+			cursor: pointer; /* the cursor will be changed to pointer on hover on this div */
+
+		}
+
+		/* recommendation section */
+		.recommend{
+
+			height: 300px;
+			width: 100%;
+			display: flex; /* the divs inside this div will be shown in flexible layouts */
+			line-height: 1.2;
+			background-color: #f8f8f8; /* light gray */
+			font-family: Cambria;
+		}
+
+		#bookimg{
+			height: 239px;
+			width: 155px;
+			margin: 20px; 
+		}
+
+		#bookdesc{
+			padding-left: 10px; 
+			margin-left: 10px; 
+			padding-top: 10px;
+		}
+
+		#more{
+			display: none; /* nothing will be displayed */
+		}
+
+		#read{
+			border: none; 
+			background-color: #f8f8f8; /* gray */
+			color: #859093; /* color of the text will be light gray */
+			text-decoration: underline; 
+			cursor: pointer; /* the cursor will be changed to pointer on hover on this div */
+		}
+
+		figcaption{
+
+			color: #5d6b6a; /* the figcaption will appear in GREY color */
+			font-family: Cambria; 
+			margin-top: 5px; 
+
+		}
+
+		h2{
+
+			font-family: Palatino, URW Palladio L, serif; 
+			color: #887d7d; /* the color of the text of this tag will be brownish */
+			font-size: 30px; 
+			font-variant: small-caps; /* this will change small letters to small caps; captial letters of smaller size */
+
+		}
+
+		h3{
+
+			font-size: 24px;
+			font-family: Palatino, URW Palladio L, serif; 
+			font-variant: small-caps; /* this will change small letters to small caps; captial letters of smaller size */
+
+		}
+
+		/* More of (genre) */
+		#genre{
+
+			display: flex;  /* the divs inside this div will be shown in flexible layouts */
+			border-top: 1px solid black; 
+			border-bottom: 1px solid black;
+			padding-top: 10px; 
+			margin-bottom: 50px; 
+
+		}
+
+		#genre > div{
+
+			margin: 10px 50px 10px 17px; 
+			height: 300px;
+			width: 160px;
+			text-align: center; 
+
+		}
+
+		#genre > div > img , #bookimg > img{
+
+			width: 155px;
+			height: 250px;
+			cursor: pointer; /* the cursor will be changed to pointer on hover on this div */
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+			
+		}
+
+		#genre > div > img:hover{
+
+			transform: scale(1.08); /* the image will transform to 1.08x its size on hover */
+			transition: 0.75s; /* the transition will take 0.75 seconds */
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="wholepage" style="height: 100%;">
+
+		<!-- Navigation bar -->
+		<div id="navbar">
+
+			<!-- Logo -->
+			<div id="logo">
+				<!-- this linked image will take us back to homepage -->
+				<a href="../index.html"><img src="../images/logo.png"></a>
+			</div>
+
+			<!-- Navigation bar buttons -->
+			<div id="navigate">	
+				<a href="../index.html"><input type="button" class="button" value="Home"></a>
+  				<a href="../pages/products.html"><input type="button" class="active" value="Products"></a>
+  				<a href="../pages/blog.html"><input type="button" class="button" value="Blog"></a>
+  				<a href="../pages/research.html"><input type="button" class="button" value="Research"></a>
+  				<a href="../pages/contact.html"><input type="button" class="button" value="Contact Us"></a>
+			</div>
+		</div>
+		
+		<!-- Contents of products starts here -->
+		<div id="products">
+
+			<!-- Slider Images -->
+			<div id="slider">
+				<div id="img">
+					<img src="../images/slider1.jpg">
+				</div>
+			</div>
+			<!-- Slider ends -->
+
+			<!-- books of products page -->
+			<div id="books">
+
+				<div>
+
+					<!-- Books of romance genre begins here -->
+					<h2>Romance</h2>
+
+					<div class="bigbooks">
+
+						<div class="book" style="background-image: url(../images/nbbg.jpg);">
+
+							<div>
+								<img src="../images/notebook.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">The Notebook</b><br>
+								by Nicholas Spark
+							</div>
+
+						</div>
+
+						<div class="book" style="background-image: url(../images/pride.jpg);">
+
+							<div>
+								<img src="../images/pnp.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">Pride and Prejudice</b><br>
+								by John Green
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- 
+						This is the recommendation section for romance genre books
+						This section has a short sypnosis of 'The Notebook' book.
+					-->
+					<h2 style="color: black;">We Recommend</h2>
+					<div class="recommend" style="height: 310px;">
+						
+						<div id="bookimg">
+							<img src="../images/notebook.jpg"><br>
+						</div>
+				
+						<div id="bookdesc">
+							<h1 style="font-family: Cambria; color: black; line-height: 0.8;">The Notebook</h1>
+							<p style="font-size: 18px;">
+								A man with a faded, well-worn notebook open in his lap. A woman experiencing a morning ritual she doesn’t understand. Until he begins to read to her.  The Notebook is an achingly tender story about the enduring power of love, a story of miracles that will stay with you forever. Set amid the austere beauty of coastal North Carolina in 1946, The Notebook begins with the story of Noah Calhoun, a rural Southerner returned home from World War II. Noah, thirty-one, is restoring a plantation home to its former glory, and he is haunted by images <span id="dots">...</span><span id="more"> of the beautiful girl he met fourteen years earlier, a girl he loved like no other. Unable to find her, yet unwilling to forget the summer they spent together, Noah is content to live with only memories until she unexpectedly returns to his town to see him once again.</span>
+								<button onclick="moreless()" id="read">Read More</button><br><br>
+								Author: Nicholas Spark<br>
+								Genre: Romance<br>
+								Price of the Book: <span style="color: #437c8c; font-weight: 600;">NPR 1850</span>
+							</p>
+						</div>	
+
+					</div>
+					<!-- Recommendation section ends here -->
+
+					<!-- more romance genre books are displayed in this section in a row of 6 -->
+					<h3>More of Romance</h3>
+					
+					<div id="genre">
+
+						<div>
+							<img src="../images/335.jpg"><br>
+							<figcaption>
+								<b>The Fault in our Stars</b><br>
+								   NPR 1900.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/6.jpg"><br> 
+							<figcaption>
+								<b>Romeo and Juliet</b><br>
+								   NPR 1650.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/fiction1.jpg"><br>
+							<figcaption>
+								<b>It Ends With Us</b><br>
+									NPR 2000.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/cra.jpg"><br>
+							<figcaption>
+								<b>Crazy Rich Asians</b><br>
+								NPR 1300.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/jane.jpg"><br>
+							<figcaption>
+								<b>Jane Eyre</b><br>
+									NPR 1900.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/violet.jpg"><br>
+							<figcaption>
+								<b>Violeta</b><br>
+								NPR 1400.00
+							</figcaption>
+						</div>
+
+					</div>
+
+				</div> 
+				<!-- books of romance genre ends here -->
+				
+
+				<!-- books of Fantasy genre starts here -->
+				<div>
+
+					<h2>Fantasy</h2>
+					<div class="bigbooks">
+
+						<div class="book" style="background-image: url(../images/throne.jpg);">
+							<div>
+								<img src="../images/got.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">Game of Thrones</b><br>
+								by George R.R. Martin
+							</div>
+
+						</div>
+
+						<div class="book" style="background-image: url(../images/lotrbg.jpg);">
+							<div>
+								<img src="../images/lotr.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">Lord of the Rings</b><br>
+								by J.R.R. Tolkien
+							</div>
+						</div>
+					
+					</div>
+
+					<!-- 
+						This is the recommendation section for books of fantasy genre.
+						This section has a short sypnosis of 'The Lord of the Rings' book.
+					-->
+					<h2 style="color: black;">We Recommend</h2>
+					<div class="recommend">
+						
+						<div id="bookimg">
+							<img src="../images/33.jpg"><br>
+						</div>
+				
+						<div id="bookdesc">
+							<h1 style="font-family: Cambria; color: black; line-height: 0.8;">The Lord of the Rings</h1>
+							<p style="font-size: 18px;">
+								The Lord of the Rings by J.R.R. Tolkien tells the story of the War of the Ring in the fictional world of Middle-earth. The long novel, commonly published as three volumes and mistakenly called a trilogy, centers around the magical One Ring, which was discovered by Bilbo Baggins in the earlier novel The Hobbit. Now, the free peoples of Middle-earth, such as Men, Elves, Dwarves, and Hobbits, must overcome the dark power of Sauron by destroying the Ring.<br><br>
+								Author: J.R.R. Tolkien<br>
+								Genre: Fantasy<br>
+								Price of the Book: <span style="color: #437c8c; font-weight: 600;">NPR 1599</span>
+							</p>
+						</div>	
+
+					</div> 
+					<!-- Recommendation section ends here -->
+
+					<!-- more fantasy genre books are displayed in this section in a row of 6 -->
+					<h3>More of Fantasy</h3>
+					
+					<div id="genre">
+
+						<div>
+							<img src="../images/111.jpg"><br>
+							<figcaption>
+								<b>Dune</b><br>
+								NPR 1500.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/star.jpg"><br>
+							<figcaption>
+								<b>Stardust</b><br>
+								NPR 2100.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/uni.jpg"><br>
+							<figcaption>
+								<b>The Last Unicorn</b><br>
+								NPR 2500.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/thorns.jpg"><br>
+							<figcaption>
+								<b>A Court of Thorns and Roses</b><br>
+								NPR 1300.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/ag.jpg"><br>
+							<figcaption>
+								<b>American Gods</b><br>
+								NPR 1900.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/5th.jpg"><br>
+							<figcaption>
+								<b>The Fifth Season</b><br>
+								NPR 1400.00
+							</figcaption>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- books of fantasy genre ends here -->
+				
+
+				<!-- manga starts here -->
+				<div>
+					
+					<h2>Manga</h2>
+					<div class="bigbooks">
+
+						<div class="book" style="background-image: url(../images/dsbg.jpg);">
+							<div>
+								<img src="../images/demonslayer.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">Demon Slayer</b><br>
+								by Koyoharu Gotouge
+							</div>
+
+						</div>
+
+						<div class="book" style="background-image: url(../images/aotbg.png);">
+							<div>
+								<img src="../images/aot.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">Attack on Titan</b><br>
+								by Hajime Isayama
+							</div>
+						</div>
+					
+					</div>
+
+					<!-- 
+						This is the recommendation section for manga.
+						This section has a short sypnosis of the manga of 'Tokyo Revengers'.
+					-->
+					<h2 style="color: black;">We Recommend</h2>
+					<div class="recommend">
+						
+						<div id="bookimg">
+							<img src="../images/tokyor.jpg"><br>
+						</div>
+				
+						<div id="bookdesc">
+							<h1 style="font-family: Cambria; color: black; line-height: 0.8;">Tokyo Revengers</h1>
+							<p style="font-size: 18px;">
+								The story follows Takemichi Hanagaki, who lives in a run-down apartment and is treated like a fool by his boss who is younger than him. While watching the news, Takemichi learns that his girlfriend from way back from middle school, Hinata Tachibana, has been killed by a villainous group known as the Tokyo Manji Gang. One day, he finds himself transported back 10 years to his middle school days where he must save Hinata, turns his life around, and chase down the Kanto region’s most evil gang.<br><br>
+								Author: Ken Wakui<br>
+								Genre: Manga<br>
+								Price of the Book: <span style="color: #437c8c; font-weight: 600;">NPR 1900</span>
+							</p>
+						</div>	
+
+					</div> <!-- Recommendation section ends here -->
+
+					<!-- more mangas are displayed in this section in a row of 6 -->
+					<h3>More of Manga</h3>
+
+					<div id="genre">
+
+						<div>
+							<img src="../images/clover.jpg"><br>
+							<figcaption>
+								<b>Black Clover Vol. 2</b><br>
+								NPR 1500.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/tg.jpg"><br>
+							<figcaption>
+								<b>Tokyo Ghoul Vol. 5</b><br>
+								NPR 2100.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/jjk.jpg"><br>
+							<figcaption>
+								<b>Jujutsu Kaisen Vol. 1</b><br>
+								NPR 2500.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/dr.jpg"><br>
+							<figcaption>
+								<b>Dr. Stone Vol. 18</b><br>
+								NPR 1300.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/tokyor.jpg"><br>
+							<figcaption>
+								<b>Tokyo Revengers Vol.24</b><br>
+								NPR 1900.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/akame.jpg"><br>
+							<figcaption>
+								<b>Akame Ga Kill Vol.15</b><br>
+								NPR 1400.00
+							</figcaption>
+						</div>
+
+					</div>
+					
+				</div> 
+				<!-- Manga section ends here -->
+
+
+				<!-- Magazine section begins here -->
+				<div>
+						
+					<h2>Magazines</h2>
+					<div class="bigbooks">
+
+						<div class="book" style="background-image: url(../images/vbg.jpg);">
+							<div>
+								<img src="../images/vogue.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">VOGUE Magazine</b><br>
+															USA
+							</div>
+
+						</div>
+
+						<div class="book" style="background-image: url(../images/ffbg.jpg);">
+							<div>
+								<img src="../images/srk.jpg" class="imgs">
+							</div>
+						
+							<div class="title">
+								<b style="font-size: 24px;">Filmfare Magazine</b><br>
+															INDIA
+							</div>
+						</div>
+					
+					</div>
+
+					<!-- 
+						This is the recommendation section for magazines.
+						This section has a short sypnosis of WIRED Magazine.
+					-->
+					<h2 style="color: black;">We Recommend</h2>
+					<div class="recommend">
+						
+						<div id="bookimg">
+							<img src="../images/stevie.jpg"><br>
+						</div>
+				
+						<div id="bookdesc">
+							<h1 style="font-family: Cambria; color: black; line-height: 0.8;">WIRED</h1>
+							<p style="font-size: 18px;">
+								Wired is a monthly technology-oriented publication with a print and digital presence. The magazine debuted in 1993 at the Macworld Conference with a mission to empower the upcoming digital generation. Historically, the print magazine has been aimed at a fairly affluent 30–50 year old college-educated male audience who are either very interested in technology or working in technology. It should be noted that Wired is owned by Condé Nast, a subsidiary of Advance Publications. In 2013, Wired launched a redesign that overhauled their print publication.<br><br>
+								Publisher: Condé Nast<br>
+								Frequency: Monthly<br>
+								Price of the Book: <span style="color: #437c8c; font-weight: 600;">NPR 500</span>
+							</p>
+						</div>	
+
+					</div>
+					<!-- Recommendation section ends here -->
+
+					<!-- more magazines are displayed in this section in a row of 6 -->
+					<div>
+						<h3>More of Magazines</h3>
+					</div>
+
+					<div id="genre">
+
+						<div>
+							<img src="../images/ssr.jpg"><br>
+							<figcaption>
+								<b>Man's World</b><br>
+								NPR 450.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/stevie.jpg"><br>
+							<figcaption>
+								<b>WIRED</b><br>
+								NPR 500.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/time.png"><br>
+							<figcaption>
+								<b>Time Magazine</b><br>
+								NPR 500.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/ny.jpg"><br>
+							<figcaption>
+								<b>The New Yorker</b><br>
+								NPR 450.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/paul.jpg"><br>
+							<figcaption>
+								<b>People Magazine</b><br>
+								NPR 400.00
+							</figcaption>
+						</div>
+
+						<div>
+							<img src="../images/billie.png"><br>
+							<figcaption>
+								<b>The New York Times Magazine</b><br>
+								NPR 350.00
+							</figcaption>
+						</div>
+
+					</div>
+					
+				</div>
+				<!-- Magazine section ends here -->
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- Contents of products ends here -->
+
+	<!-- Footer -->
+	<div id="details">
+		
+		<center><img style="width: 300px; margin-top: 10px;" src="../images/logo.png" alt="centered image"></center>
+
+			<div class="work">
+				<div style="margin-left: 35%; text-align: center; line-height: 1.5;">
+					<b style="color: #204C64;">Our Socials:</b><br>
+
+					<!-- link for facebook -->
+					<a href="https://www.facebook.com/"><img src="../images/fb.png"></a>
+
+					<!-- link for instagram -->
+					<a href="https://www.instagram.com/"><img src="../images/ig.png"></a>
+
+					<!-- link for twitter -->
+					<a href="https://www.twitter.com/"><img src="../images/tw.png"></a>
+				</div>
+
+				<div style="margin-left: 10%; color: #204C64;">
+					<b>Interested in working with us?</b><br>
+					Email: sales@archivebooks.com<br>
+					Tel: +977-14578445
+				</div>
+
+			</div>
+
+	</div>
+	<!-- Footer ends -->
+
+	<!-- JavaScript for Slider -->
+	<script type="text/javascript">
+			var images = ['../images/slider1.jpg', '../images/slider2.jpg', '../images/slider3.jpg'];
+			var imgs   = document.getElementById('img');
+			var x = 0;
+			setInterval(slider,3000); //slider changes images every 3 seconds
+
+			function slider()
+			{
+				if (x < images.length) //images.length = 3
+				{
+					x = x+1;
+				}	 
+				else
+				{
+					x = 1;
+				}
+
+				imgs.innerHTML = "<img src =" + images[x-1] + ">" ;
+
+			}
+	</script>
+	<!-- JavaScript ends here -->
+
+</body>
+</html>
